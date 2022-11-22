@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import store from "@/store";
 import { Mutations, Actions } from "@/store/enums/StoreEnums";
 import JwtService from "@/core/services/JwtService";
-
+import isAuthenticatedGuard from "./admin-guard";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
@@ -41,7 +41,12 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: "/Adminform",
         name: "Admin Form",
-        component: () => import("@/views/Adminform.vue"),
+        beforeEnter: [isAuthenticatedGuard],
+        component: () => {
+          if (isAuthenticatedGuard == false) {
+            import("@/views/Adminform.vue");
+          }
+        },
         meta: {
           pageTitle: "Admin support",
         },

@@ -187,7 +187,6 @@ export default defineComponent({
       email: Yup.string().email().required().label("Email"),
       password: Yup.string().min(4).required().label("Password"),
     });
-
     //Form submit function
     const onSubmitLogin = async (values) => {
       // Clear existing errors
@@ -204,7 +203,6 @@ export default defineComponent({
       await store.dispatch(Actions.LOGIN, values);
       const [errorName] = Object.keys(store.getters.getErrors);
       const error = store.getters.getErrors[errorName];
-
       if (!error) {
         Swal.fire({
           text: "You have successfully logged in!",
