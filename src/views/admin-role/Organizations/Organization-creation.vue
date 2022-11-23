@@ -1,3 +1,3 @@
 <template>
-  <h2>List Of Organizations</h2>
+  <h2>Organizations Creation form</h2>
 </template>

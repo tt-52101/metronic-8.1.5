@@ -42,11 +42,7 @@ const routes: Array<RouteRecordRaw> = [
         path: "/Adminform",
         name: "Admin Form",
         beforeEnter: [isAuthenticatedGuard],
-        component: () => {
-          if (isAuthenticatedGuard == false) {
-            import("@/views/Adminform.vue");
-          }
-        },
+        component: () => import("@/views/Adminform.vue"),
         meta: {
           pageTitle: "Admin support",
         },
@@ -116,6 +112,58 @@ const routes: Array<RouteRecordRaw> = [
         ],
       },
       {
+        path: "/",
+        name: "profile",
+        component: () => import("@/components/page-layouts/Profile.vue"),
+        meta: {
+          breadcrumbs: ["Pages", "Profile"],
+        },
+        children: [
+          {
+            path: "/organizations/create-organizations",
+            name: "Organizations Creation",
+            component: () =>
+              import(
+                "@/views/admin-role/Organizations/Organization-creation.vue"
+              ),
+            meta: {
+              pageTitle: "Create Organization",
+            },
+          },
+          {
+            path: "/organizations/create-organizations",
+            name: "Organizations Creation",
+            component: () =>
+              import(
+                "@/views/admin-role/Organizations/Organization-creation.vue"
+              ),
+            meta: {
+              pageTitle: "Create Organization",
+            },
+          },
+          {
+            path: "/organizations/password-reset",
+            name: "Organization Password reset",
+            component: () =>
+              import("@/views/admin-role/Organizations/PasswordReset.vue"),
+            meta: {
+              pageTitle: "Organization Password Change",
+            },
+          },
+          {
+            path: "/organizations/edit-details",
+            name: "Organization Edit Details",
+            component: () =>
+              import(
+                "../views/admin-role/Organizations/OrganizationDetails.vue"
+              ),
+            meta: {
+              pageTitle: "Organization Password Change",
+            },
+          },
+        ],
+      },
+      {
         path: "/crafted/pages/wizards/horizontal",
         name: "horizontal-wizard",
         component: () => import("@/views/crafted/pages/wizards/Horizontal.vue"),
@@ -159,6 +207,49 @@ const routes: Array<RouteRecordRaw> = [
           },
         ],
       },
+      {
+        path: "/crafted/account",
+        name: "account",
+
+        component: () => import("@/views/crafted/account/Account.vue"),
+        meta: {
+          breadcrumbs: ["Crafted", "Account"],
+        },
+        children: [
+          {
+            path: "/admin-role/super-adminuser/change-password",
+            name: "Super user password reset",
+            component: () =>
+              import(
+                "@/views/admin-role/SuperUsers/SuperUserChangePassword.vue"
+              ),
+            meta: {
+              pageTitle: "Super User Password Change",
+            },
+          },
+          {
+            path: "/admin-role/super-adminuser/creation",
+            name: "Super User creation",
+            component: () =>
+              import("@/views/admin-role/SuperUsers/SuperUserCreation.vue"),
+            meta: {
+              pageTitle: "Super User creation",
+            },
+          },
+          {
+            path: "/admin-role/super-adminuser/details",
+            name: "Super User details",
+            component: () =>
+              import("@/views/admin-role/SuperUsers/SuperUserDetails.vue"),
+            meta: {
+              pageTitle: "Super User Details",
+            },
+          },
+        ],
+      },
+
+      /*  aqui termina menu super admin */
+
       {
         path: "/apps/customers/getting-started",
         name: "apps-customers-getting-started",

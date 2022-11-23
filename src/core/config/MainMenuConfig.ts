@@ -1,13 +1,6 @@
-import isAuthenticatedGuard from "../../router";
 const DocMenuConfig = [
   {
     pages: [
-      {
-        heading: "Super Admin",
-        route: "/Adminform",
-        svgIcon: "media/icons/duotune/technology/teh001.svg",
-        fontIcon: "bi-layers",
-      },
       {
         heading: "It Support",
         route: "/Itsupport",
@@ -25,74 +18,6 @@ const DocMenuConfig = [
         route: "/builder",
         svgIcon: "media/icons/duotune/general/gen019.svg",
         fontIcon: "bi-layers",
-      },
-    ],
-  },
-  {
-    beforeMount: [isAuthenticatedGuard],
-    heading: "Super Admin Role",
-    route: "/crafted",
-    pages: [
-      {
-        sectionTitle: "Organizations",
-        route: "/pages",
-        svgIcon: "media/icons/duotune/art/art003.svg",
-        fontIcon: "bi-archive",
-        sub: [
-          {
-            heading: "Create an Organization",
-            route: "/views/admin-role/SuperUserChangePassword",
-          },
-          {
-            heading: "Edit Organization details",
-            route: "/views/admin-role/SuperUserCreation",
-          },
-          {
-            heading: "Password reset",
-            route: "/views/admin-role/SuperUserDetails",
-          },
-        ],
-      },
-      {
-        sectionTitle: "Super User Options",
-        route: "/pages",
-        svgIcon: "media/icons/duotune/communication/com006.svg",
-        fontIcon: "bi-archive",
-        sub: [
-          {
-            heading: "Super User Creation",
-            route: "/crafted/pages/wizards/vertical",
-          },
-          {
-            heading: "Simple User password reset",
-            route: "/crafted/pages/profile/activity",
-          },
-          {
-            heading: "Simple password reset",
-            route: "/crafted/pages/profile/activity",
-          },
-          {
-            heading: "Super user Password reset",
-            route: "/password-reset",
-          },
-        ],
-      },
-      {
-        sectionTitle: "IT Pool",
-        route: "/pages",
-        svgIcon: "media/icons/duotune/general/gen022.svg",
-
-        fontIcon: "bi-archive",
-        sub: [
-          {
-            heading: "Ticket Spool",
-            route: "/crafted/pages/profile/projects",
-          },
-          {
-            heading: "Request Pending for Approval",
-            route: "/crafted/pages/profile/connections",
-          },
-        ],
       },
     ],
   },

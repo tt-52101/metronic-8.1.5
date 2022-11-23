@@ -1,10 +1,12 @@
-const isAuthenticatedGuard = (to, from, next) => {
+const isAuthenticatedGuard = async (to, from, next) => {
   return new Promise(() => {
-    const admin = false;
-    if (admin == true) {
+    const random = Math.random() * 100;
+    if (random > 50) {
+      console.log("esta autenticado");
       next();
     } else {
-      console.log("bloqueado por el authenticatedGuard", admin);
+      console.log("bloqueado por el authenticatedGuard", random);
+      //next();
     }
   });
 };
