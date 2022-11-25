@@ -114,7 +114,6 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: "/",
         name: "profile",
-        component: () => import("@/components/page-layouts/Profile.vue"),
         meta: {
           breadcrumbs: ["Pages", "Profile"],
         },

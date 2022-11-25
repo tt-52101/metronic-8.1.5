@@ -14,6 +14,16 @@
 
     <!--begin::Menu item-->
     <div class="menu-item px-5">
+      <a href="#" class="menu-link lex-stack px-5">
+        Apply changes
+        <span
+          class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary ms-2 fs-"
+        >
+          0
+        </span>
+      </a>
+    </div>
+    <div class="menu-item px-5">
       <a href="#" class="menu-link px-5"> Create invoice </a>
     </div>
     <!--end::Menu item-->

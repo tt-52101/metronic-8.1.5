@@ -307,13 +307,6 @@ th {
   color: #a1a5b7 !important;
   font-size: 15px !important;
 }
-tbody tr td p {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
 td,
 th {
   padding: 10px;
