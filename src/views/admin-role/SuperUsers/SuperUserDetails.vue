@@ -6,7 +6,7 @@
   <div class="card mb-5 mb-xxl-8 pt-7">
     <div class="card-header d-flex align-items-center text-hover-primary">
       <h2 class="mt-5">Super User Details</h2>
-      <div class="d-flex align-self-end">
+      <div class="d-flex align-self-end flex-wrap">
         <form class="search-box mb-2">
           <button>
             <span class="material-symbols-outlined">search</span>
@@ -33,7 +33,7 @@
             >
               <i class="bi bi-chevron-down fs-3"></i>
             </button>
-            <Dropdown3></Dropdown3>
+            <Dropdown1></Dropdown1>
           </div>
         </div>
       </div>
@@ -44,11 +44,10 @@
           <thead>
             <tr>
               <th scope="col">Active</th>
-              <th scope="col">Name</th>
-              <th scope="col">White Label</th>
+              <th scope="col">Super User</th>
+              <th scope="col">Organization</th>
               <th scope="col">email</th>
               <th scope="col">Contact</th>
-              <th scope="col">Address</th>
               <th scope="col">More Details</th>
             </tr>
           </thead>
@@ -70,22 +69,12 @@
                 </div>
               </td>
               <td>
-                <a class="fw-semobold fs-6">Login PBX</a>
+                <a class="fw-semobold fs-6">Max Smith</a>
               </td>
               <td>
-                <div class="d-inline-flex whitelabels">
-                  <button
-                    class="btn btn-sm btn-iconbtn-bg-light btn-active-color-primary p-2"
-                    data-kt-menu-trigger="click"
-                    data-kt-menu-placement="bottom-end"
-                    data-kt-menu-flip="top-end"
-                  >
-                    <span class="mr-auto p-2">All White Labels</span>
-                    <i class="bi bi-chevron-down fs-3"></i>
-                  </button>
-                  <Dropdown3></Dropdown3>
-                </div>
+                <a class="fw-semobold fs-6">Login PBX</a>
               </td>
+              
               <td>
                 <p>
                   <strong>logixpbx@managedlogix.com</strong>
@@ -100,22 +89,106 @@
                 </div>
               </td>
               <td>
+                <div class="d-flex filter">
+                  <div class="p-2">
+                    <button
+                      class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
+                      data-kt-menu-trigger="click"
+                      data-kt-menu-placement="bottom-end"
+                      data-kt-menu-flip="top-end"
+                    >
+                      <i class="bi three-dots fs-3"></i>
+                    </button>
+                    <Dropdown3></Dropdown3>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <!-- enabled button -->
+                <div class="row mb-10">
+                  <div class="col-lg-9 col-xl-4">
+                    <span class="switch switch-icon">
+                      <input type="hidden" />
+                      <div
+                        class="form-check form-check-custom form-check-solid form-switch mb-2"
+                      >
+                        <input class="form-check-input" type="checkbox" />
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <a class="fw-semobold fs-6">Melody Macy</a>
+              </td>
+              <td>
+                <a class="fw-semobold fs-6">Organization Two</a>
+              </td>
+              <td>
+                <p>
+                  <strong>melody@altbox.com</strong>
+                </p>
+              </td>
+              <td>
                 <div>
                   <p>
-                    Address:
-                    <strong>900 N Broadway st</strong>
+                    Phone:
+                    <strong> 888-777-9999 </strong>
                   </p>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex filter">
+                  <div class="p-2">
+                    <button
+                      class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
+                      data-kt-menu-trigger="click"
+                      data-kt-menu-placement="bottom-end"
+                      data-kt-menu-flip="top-end"
+                    >
+                      <i class="bi three-dots fs-3"></i>
+                    </button>
+                    <Dropdown3></Dropdown3>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <!-- enabled button -->
+                <div class="row mb-10">
+                  <div class="col-lg-9 col-xl-4">
+                    <span class="switch switch-icon">
+                      <input type="hidden" />
+                      <div
+                        class="form-check form-check-custom form-check-solid form-switch mb-2"
+                      >
+                        <input class="form-check-input" type="checkbox" />
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <a class="fw-semobold fs-6">Sean Bean</a>
+              </td>
+              <td>
+                <a class="fw-semobold fs-6">Demo Organization</a>
+              </td>
+              <td>
+                <p>
+                  <strong>sean@dellito.com</strong>
+                </p>
+              </td>
+              <td>
+                <div>
                   <p>
-                    Zip:
-                    <strong>92705</strong>
-                  </p>
-                  <p>
-                    City:
-                    <strong> Santa Ana </strong>
-                  </p>
-                  <p>
-                    State:
-                    <strong>CA</strong>
+                    Phone:
+                    <strong> 888-777-9999 </strong>
                   </p>
                 </div>
               </td>
@@ -143,11 +216,13 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
+import Dropdown1 from "@/components/dropdown/Dropdown1.vue";
 import Dropdown3 from "@/components/dropdown/Dropdown3.vue";
 
 export default defineComponent({
   name: "profile-page-layout",
   components: {
+    Dropdown1,
     Dropdown3,
   },
 });
